@@ -34,12 +34,12 @@ fun main() {
     FirebaseMessaging.getInstance().send(message)
 
     message = Message.builder()
-        .putData("action", "NEW_POST")
+        .putData("action", "News")
         .putData(
             "content", """{
           "userId": 2,
           "userName": "Anna",
-          "postId": 5,
+          "postId": 3,
           "text": "На сегодняшнем совещании было решено:..."
         }""".trimIndent()
         )
@@ -49,13 +49,13 @@ fun main() {
     FirebaseMessaging.getInstance().send(message)
 
     message = Message.builder()
-        .putData("action", "old")
+        .putData("action", "NEW_POST")
         .putData(
             "content", """{
-          "userId": 2,
-          "userName": "Anna",
-          "postId": 5,
-          "text": "На сегодняшнем совещании было решено:..."
+          "userId": 3,
+          "userName": "Galaxy News",
+          "postId": 4,
+          "text": "Жители планеты Огуз просят помощи у жителей планеты Ормон в депортации нелегальных инопланетян из неизвестной планеты."
         }""".trimIndent()
         )
         .setToken(Constance.TOKEN)
